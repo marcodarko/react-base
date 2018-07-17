@@ -10,8 +10,6 @@ export default class Home extends React.Component {
     this.myFunc = this.myFunc.bind(this);
   }
 
-
-
   myFunc(arg){
 
   	this.setState({
@@ -23,7 +21,7 @@ export default class Home extends React.Component {
   render() {
     return (
       <div className="container">
-        <h1>Hello World {this.state.something}</h1>
+        <h1>Hello World</h1>
       </div>
     );
   }
