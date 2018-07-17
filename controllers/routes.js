@@ -2,7 +2,7 @@
 // Require request and cheerio. This makes the scraping possible
 var request = require("request");
 
-var mongoose = require("mongoose");
+// var mongoose = require("mongoose");
 
 var express = require("express");
 

@@ -1,26 +1,29 @@
+const path = require('path');
 module.exports = {
+   mode: 'development',
 
   // This is the entry point or start of our react applicaton
   entry: "./app/app.js",
 
   // The plain compiled Javascript will be output into this file
   output: {
-    filename: "static/bundle.js"
+    filename: "bundle.js",
+    path: path.resolve(__dirname, 'dist')
   },
 
   // This section desribes the transformations we will perform
   module: {
-    loaders: [
+    rules: [
       {
         // Only working with files that in in a .js or .jsx extension
         test: /\.jsx?$/,
         // Webpack will only process files in our app folder. This avoids processing
         // node modules and server files unnecessarily
         include: /app/,
-        loader: "babel",
+        loader: "babel-loader",
         query: {
           // These are the specific transformations we'll be using.
-          presets: ['es2015', 'es2016', 'react']
+          presets: ['env']
         }
       }
     ]
