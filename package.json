@@ -1,0 +1,31 @@
+{
+  "name": "react-base",
+  "version": "1.0.0",
+  "description": "A MERN app skeleton",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marcodarko/react-base.git"
+  },
+  "author": "Marco Cano",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/marcodarko/react-base/issues"
+  },
+  "homepage": "https://github.com/marcodarko/react-base#readme",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "bluebird": "^3.5.1",
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3",
+    "method-override": "^3.0.0",
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1",
+    "react-redux": "^5.0.7",
+    "react-router": "^4.3.1",
+    "webpack": "^4.16.1"
+  }
+}
