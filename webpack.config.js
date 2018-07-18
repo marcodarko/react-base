@@ -1,13 +1,13 @@
 const path = require('path');
 let webpack = require("webpack");
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+const ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 module.exports = {
     mode: 'production',
     entry: './app/app.js',
     output: {
-      path: path.resolve(__dirname, 'static/js/'),
-      filename: "[name].js",
+      path: path.resolve(__dirname, 'static/'),
+      filename: "./js/[name].js",
     },
     module: {
         rules: [
@@ -17,12 +17,21 @@ module.exports = {
             use: {
               loader: "babel-loader"
             }
-          }]
+          },{
+            test: /\.scss$/,
+            use:ExtractTextPlugin.extract({
+              fallback: 'style-loader',
+              use:['css-loader','sass-loader'],
+              publicPath:'static/css/'
+            })
+         }]
     },
-    // plugins:[
-    //   new HtmlWebpackPlugin({
-    //     template: './static/index.html'
-    //   })
-    // ],
+    plugins:[
+      new ExtractTextPlugin({
+        filename: "./css/[name].css",
+        disable: false,
+        allChunks: true
+      })
+    ],
     devtool: "eval-source-map"
 };
