@@ -1,7 +1,6 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
 
-export default class Home extends React.Component {
+export default class Test extends React.Component {
 
   constructor(props) {
     super(props);
@@ -22,8 +21,7 @@ export default class Home extends React.Component {
   render() {
     return (
       <div className="container">
-        <h1>React Running</h1>
-        <Link to='/marco'>Click Me</Link>
+        <h1>Routing Works</h1>
       </div>
     );
   }

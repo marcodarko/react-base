@@ -22,11 +22,8 @@ app.use(bodyParser.urlencoded({
 }));
 app.use(methodOverride("_method"));
 
-
-
 // Make public a static dir
 app.use(express.static("static"));
-
 
 // Import routes and give the server access to them.
 var routes = require("./controllers/routes.js");

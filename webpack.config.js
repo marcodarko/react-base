@@ -1,31 +1,28 @@
-
-
-var path = require('path');
+const path = require('path');
 let webpack = require("webpack");
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
     mode: 'production',
-    entry: {
-        app: './app/app.js',
-        vendor: ["react","react-dom"]
-    },
+    entry: './app/app.js',
     output: {
-      path: path.resolve(__dirname, 'dist'),
+      path: path.resolve(__dirname, 'static/js/'),
       filename: "[name].js",
-      publicPath: '/public/'
     },
     module: {
-        rules: [{
-            test: /\.jsx?$/,
+        rules: [
+          {
+            test: /\.js$/,
             exclude: /node_modules/,
             use: {
-                loader: 'babel-loader?cacheDirectory=true',
+              loader: "babel-loader"
             }
-        },
-            {
-                test: /\.js$/,
-                use: 'babel-loader?cacheDirectory=true'
-            }]
+          }]
     },
+    // plugins:[
+    //   new HtmlWebpackPlugin({
+    //     template: './static/index.html'
+    //   })
+    // ],
     devtool: "eval-source-map"
 };
