@@ -20,9 +20,7 @@ var router = express.Router();
 // Otherwise send all other requests the index.html page
 // React router will handle routing withing the app
 router.get('*', function(req, res){
-
-  res.sendFile(path.resolve(__dirname, 'index.html'))
-
+  res.sendFile('index.html', { root: './static/' });
 });
 
 // Export routes for server.js to use.

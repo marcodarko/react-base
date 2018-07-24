@@ -17,17 +17,15 @@ export default class Nav extends React.Component {
 
   render() {
     return (
-      <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
-        <Link className="nav-item nav-link active text-light" to='/'>Home</Link>
-        <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-          <span className="navbar-toggler-icon"></span>
-        </button>
-        <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
-          <div className="navbar-nav">
-            <Link className="nav-item nav-link active" to='/marco'>To Test <span className="sr-only">(current)</span></Link>
+      <header>
+        <nav className="header">
+          <Link className="logo" to="/">React App</Link>
+          <div className="header-right">
+            <Link className="" to='/'>Home</Link>
+            <Link className="" to='/marco'>To Test</Link>
           </div>
-        </div>
-      </nav>
+        </nav>
+      </header>
     );
   }
 }

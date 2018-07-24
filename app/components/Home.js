@@ -21,10 +21,9 @@ export default class Home extends React.Component {
 
   render() {
     return (
-      <div className="container">
+      <section className="">
         <h1>React Running</h1>
-        <Link to='/marco'>Click Me</Link>
-      </div>
+      </section>
     );
   }
 }
