@@ -1,6 +1,26 @@
-# react-base
-A React, Express, Node app skeleton ready to go
+# React Express Sass Redux App Skeleton
 
-to install run 'npm install'
+A quick easy to use skelton ready to go
 
-To test run 'npm start' and 'webpack --watch'
+  - Redux 4
+  - Express 4.16
+  - React 16.4
+  - Sass 4.9
+  - Webpack 4.16
+  - React-Router-Connected 4.3
+
+### Installation
+
+This app requires [Node.js](https://nodejs.org/) v4+ to run.
+
+Install the dependencies and devDependencies and start the server.
+
+```sh
+$ npm install
+$ npm start
+$ webpack --watch
+```
+
+### Todos
+
+ - Add testing

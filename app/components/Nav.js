@@ -23,6 +23,7 @@ export default class Nav extends React.Component {
           <div className="header-right">
             <Link className="" to='/'>Home</Link>
             <Link className="" to='/marco'>To Test</Link>
+            <Link className="" to='/api/test'>Api</Link>
           </div>
         </nav>
       </header>
