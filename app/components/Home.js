@@ -6,6 +6,9 @@ class Home extends React.Component {
 
   constructor(props) {
     super(props);
+    this.state={
+      test: 'new value'
+    }
     this.myFunc = this.myFunc.bind(this);
   }
 
@@ -17,7 +20,7 @@ class Home extends React.Component {
     return (
       <section className="" style={{padding: '20px', margin: '0 auto'}}>
         <h1>React Running</h1>
-        <button onClick={this.props.onTestClick}>Test Redux Store</button>
+        <button onClick={()=>{this.props.onTestClick(this.state.test)}}>Test Redux Store</button>
         <p>VALUE OF 'SOMETHING': {this.props.something}</p>
       </section>
     );
@@ -32,15 +35,13 @@ function mapStateToProps(state) {
 
 function mapDispatchToProps(dispatch) {
   return {
-    onTestClick: ()=>{
+    onTestClick: (value)=>{
       console.log('clicking');
-      const action = {type: "TEST", payload: 'new value'};
+      const action = {type: "TEST", payload: value};
       dispatch(action);
     }
   }
 }
-
-
 
 export default connect(
   mapStateToProps, mapDispatchToProps

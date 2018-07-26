@@ -20,7 +20,7 @@ export default class Test extends React.Component {
 
   render() {
     return (
-      <div className="container">
+      <div className="" style={{padding: '20px', margin: '0 auto'}}>
         <h1>Routing Works</h1>
       </div>
     );

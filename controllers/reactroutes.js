@@ -23,13 +23,14 @@ import { Provider } from 'react-redux'
 import { Route, Switch } from 'react-router' // react-router v4
 import { ConnectedRouter } from 'connected-react-router'
 import rootReducer from './reducers/reducer'
+import { composeWithDevTools } from 'redux-devtools-extension';
 
 const history = createBrowserHistory()
 
 
 const store = createStore(
-  connectRouter(history)(rootReducer,window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()), // new root reducer with router state
-  compose(
+  connectRouter(history)(rootReducer), // new root reducer with router state
+  composeWithDevTools(
     applyMiddleware(
       routerMiddleware(history), // for dispatching history actions
       // ... other middlewares ...
