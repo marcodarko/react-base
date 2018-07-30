@@ -30,6 +30,7 @@ const history = createBrowserHistory()
 
 const store = createStore(
   connectRouter(history)(rootReducer), // new root reducer with router state
+  //change to compose() for production
   composeWithDevTools(
     applyMiddleware(
       routerMiddleware(history), // for dispatching history actions
