@@ -6,9 +6,14 @@ $background_color_1: #f1f1f1;
 $background_color_2: #ddd;
 $background_color_3: dodgerblue;
 
+
 body{
-  background-color: $mainColor;
+  background: -webkit-linear-gradient(violet, lightblue);
+  background: -o-linear-gradient(violet, lightblue);
+  background: linear-gradient(violet, lightblue);
   font-family: sans-serif;
+  height: 100vh;
+  box-shadow: 10px 10px blue;
 }
 
 /* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */

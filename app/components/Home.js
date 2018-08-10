@@ -16,7 +16,7 @@ class Home extends React.Component {
 
   testApi(){
     axios.get('/api/test').then(res=>{
-      console.log("response",res);
+      // console.log("response",res);
       this.setState({
         apiRes: res.data.test
       })
@@ -49,7 +49,6 @@ function mapStateToProps(state) {
 function mapDispatchToProps(dispatch) {
   return {
     onTestClick: (value)=>{
-      console.log('clicking');
       const action = {type: "TEST", payload: value};
       dispatch(action);
     }

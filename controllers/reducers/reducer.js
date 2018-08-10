@@ -3,7 +3,7 @@ let initalState ={
 }
 
 const rootReducer = (state = initalState, action) => {
-  console.log('reducer runnning', action);
+  // console.log('reducer runnning', action);
   switch (action.type) {
     case "TEST":
       return Object.assign({}, state, { something: action.payload });
